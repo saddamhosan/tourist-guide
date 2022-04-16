@@ -1,7 +1,5 @@
 // import { signOut } from "firebase/auth";
 import React, { useState } from "react";
-// import { useAuthState } from "react-firebase-hooks/auth";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 // import auth from "../../firebase.init";
@@ -10,13 +8,13 @@ const Header = () => {
   let [open, setOpen] = useState(false);
 //   const [user] = useAuthState(auth);
   return (
-    <div className="shadow-md w-full fixed top-0 left-0">
+    <div className="shadow-md w-full  top-0 left-0">
       <div className="h-16 md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div
           className="font-bold text-2xl cursor-pointer  font-[Poppins] 
       text-gray-800"
         >
-          <Link to="/">Red Chilli</Link>
+          <Link to="/">Tourist Guide</Link>
         </div>
 
         <div
@@ -33,35 +31,60 @@ const Header = () => {
         >
           <li className="md:ml-8 text-xl md:my-0 my-7">
             <NavLink
-              className="text-gray-800 hover:text-gray-400 duration-500"
-              to="cart"
+              className={({ isActive }) =>
+                `text-gray-800 hover:text-gray-400 duration-500 ${
+                  isActive ? "border-b-2 border-red-400" : ""
+                }`
+              }
+              to="/"
             >
-              <AiOutlineShoppingCart />
+              Home
             </NavLink>
-          </li>
-
-          <li className="md:ml-8 text-xl md:my-0 my-7">
-            {/* {user?.uid ? (
-              <button onClick={() => signOut(auth)}>sign out</button>
-            ) : (
-              <NavLink
-                className="text-gray-800 hover:text-gray-400 duration-500"
-                to="signIn"
-              >
-                Sign In
-              </NavLink>
-            )} */}
           </li>
 
           <li className="md:ml-8 text-xl md:my-0 my-7">
             <NavLink
-              className="text-gray-800 hover:text-gray-400 duration-500"
-              to="signUp"
+              className={({ isActive }) =>
+                `text-gray-800 hover:text-gray-400 duration-500 ${
+                  isActive ? "border-b-2 border-red-400" : ""
+                }`
+              }
+              to="signIn"
             >
-              Sign Up
+              Blogs
+            </NavLink>
+          </li>
+
+          <li className="md:ml-8 text-xl md:my-0 my-7">
+            <NavLink
+              className={({ isActive }) =>
+                `text-gray-800 hover:text-gray-400 duration-500 ${
+                  isActive ? "border-b-2 border-red-400" : ""
+                }`
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
+          </li>
+          <li className="md:ml-8 text-xl md:my-0 my-7">
+            <NavLink
+              className={({ isActive }) =>
+                `text-gray-800 hover:text-gray-400 duration-500 ${
+                  isActive ? "border-b-2 border-red-400" : ""
+                }`
+              }
+              to="login"
+            >
+              Login
             </NavLink>
           </li>
           {/* {user?.uid && <p className="ml-6">{user?.displayName}</p>} */}
+          {/* {user?.uid ? (
+            <button onClick={() => signOut(auth)}>sign out</button>
+          ) : (
+            <p>hello</p>
+          )} */}
         </ul>
       </div>
     </div>
