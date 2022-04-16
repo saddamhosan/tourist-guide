@@ -18,16 +18,28 @@ const settings = {
   pauseOnHover: true,
 };
     return (
-      <div className="mx-8 mb-8  ">
+      <div className="mx-8 mb-8 pt-4  ">
         <Slider {...settings}>
           <div>
-            <img className="h-[500px] w-full" src={banner1} alt="" />
+            <img
+              className="h-[300px] md:h-[500px] w-full"
+              src={banner1}
+              alt=""
+            />
           </div>
           <div>
-            <img className="h-[500px] w-full" src={banner2} alt="" />
+            <img
+              className="h-[300px] md:h-[500px] w-full"
+              src={banner2}
+              alt=""
+            />
           </div>
           <div>
-            <img className="h-[500px] w-full" src={banner3} alt="" />
+            <img
+              className="h-[300px] md:h-[500px] w-full"
+              src={banner3}
+              alt=""
+            />
           </div>
         </Slider>
       </div>

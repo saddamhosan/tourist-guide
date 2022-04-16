@@ -3,23 +3,23 @@
     "id": 1,
     "name": "Basic Package",
     "price": 100,
-    "description": "Cox's bazar to Inani & Himsori ",
+    "destination": "Cox's bazar to Inani & Himsori ",
     "duration": " three hour",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqMrY9eMBRKBymEZ0Dfng5AfCA-ZKwy0oqA&usqp=CAU"
   },
   {
     "id": 2,
-    "name": "Standard",
+    "name": "Standard Package",
     "price": 400,
-    "description": "cox's bazar to sent martin",
+    "destination": "cox's bazar to sent martin",
     "duration": "One day",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYrof3aeX92aOR1PO6zUE0BuFSmi0uk-cA6Q&usqp=CAU"
   },
   {
     "id": 3,
-    "name": "Premium",
+    "name": "Premium Package",
     "price": 7000,
-    "description": "Cox's bazar to Bandarban",
+    "destination": "Cox's bazar to Bandarban",
     "duration": "Two days",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGr0zCsoV2ZDzHetRBr9f9APx32tcnVhCROA&usqp=CAU"
   }
