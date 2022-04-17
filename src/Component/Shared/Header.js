@@ -1,12 +1,13 @@
-// import { signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
-// import auth from "../../firebase.init";
+import auth from "../../firebase.init";
 
 const Header = () => {
   let [open, setOpen] = useState(false);
-//   const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   return (
     <div className="shadow-md w-full sticky md:static top-0 left-0">
       <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7">
@@ -21,7 +22,7 @@ const Header = () => {
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
         >
-          <GiHamburgerMenu color="white" name={open ? "close" : "menu"}/>
+          <GiHamburgerMenu color="white" name={open ? "close" : "menu"} />
         </div>
 
         <ul
@@ -68,23 +69,28 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="md:ml-8 text-xl md:my-0 my-7">
-            <NavLink
-              className={({ isActive }) =>
-                `text-white font-semibold hover:text-orange-300 duration-500 ${
-                  isActive ? "border-b-2 border-red-400" : ""
-                }`
-              }
-              to="/login"
-            >
-              Login
-            </NavLink>
+            {user?.uid ? (
+              <button
+                className=
+                  "text-white font-semibold hover:text-orange-300 duration-500 "
+                onClick={() => signOut(auth)}
+              >
+                sign out
+              </button>
+            ) : (
+              <NavLink
+                className={({ isActive }) =>
+                  `text-white font-semibold hover:text-orange-300 duration-500 ${
+                    isActive ? "border-b-2 border-red-400" : ""
+                  }`
+                }
+                to="/login"
+              >
+                Login
+              </NavLink>
+            )}
           </li>
-          {/* {user?.uid && <p className="ml-6">{user?.displayName}</p>} */}
-          {/* {user?.uid ? (
-            <button onClick={() => signOut(auth)}>sign out</button>
-          ) : (
-            <p>hello</p>
-          )} */}
+          {user?.uid && <p className="ml-6 font-bold text-slate-700">{user?.displayName}</p>}
         </ul>
       </div>
     </div>
