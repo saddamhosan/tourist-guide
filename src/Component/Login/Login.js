@@ -86,7 +86,7 @@ const Login = () => {
             </p>
           )}
 
-          <div className="flex justify-center">
+          <div className="flex justify-center my-3">
             <input
               className="bg-blue-600 text-xl font-bold px-5 py-2 text-white rounded-xl mt-2"
               type="submit"

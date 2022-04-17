@@ -15,7 +15,7 @@ const Header = () => {
           className="text-white font-bold text-3xl cursor-pointer  font-[Poppins] 
       "
         >
-          <Link to="/">Tourist Guide</Link>
+          <Link to="/">Travel Companion</Link>
         </div>
 
         <div
@@ -71,8 +71,7 @@ const Header = () => {
           <li className="md:ml-8 text-xl md:my-0 my-7">
             {user?.uid ? (
               <button
-                className=
-                  "text-white font-semibold hover:text-orange-300 duration-500 "
+                className="text-white font-semibold hover:text-orange-300 duration-500 "
                 onClick={() => signOut(auth)}
               >
                 sign out
@@ -90,7 +89,9 @@ const Header = () => {
               </NavLink>
             )}
           </li>
-          {user?.uid && <p className="ml-6 font-bold text-slate-700">{user?.displayName}</p>}
+          {user?.uid && (
+            <p className="ml-6 font-bold text-slate-700">{user?.displayName}</p>
+          )}
         </ul>
       </div>
     </div>
