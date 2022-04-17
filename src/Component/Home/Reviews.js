@@ -16,7 +16,7 @@ useEffect(() => {
       </h1>
       <div className="mt-20 grid md:grid-cols-3 gap-10 m-10">
         {reviews.map((review) => (
-          <Review key={review.id} review={review} />
+          <Review key={review.id} singleReview={review} />
         ))}
       </div>
     </div>
