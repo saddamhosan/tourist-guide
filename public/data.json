@@ -3,15 +3,17 @@
     "id": 1,
     "name": "Inani Package",
     "price": 100,
-    "destination": "Cox's bazar to Inani & Himsori.",
-    "duration": " three hours.",
+    "destination": "Cox's bazar to Inani ",
+    "extra": "Photo session included",
+    "duration": " Three hours ",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqMrY9eMBRKBymEZ0Dfng5AfCA-ZKwy0oqA&usqp=CAU"
   },
   {
     "id": 2,
     "name": "Sent Martin Package",
     "price": 400,
-    "destination": "cox's bazar to sent martin.",
+    "destination": "Cox's bazar to sent martin.",
+    "extra": "Photo session included",
     "duration": "One day.",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYrof3aeX92aOR1PO6zUE0BuFSmi0uk-cA6Q&usqp=CAU"
   },
@@ -20,6 +22,7 @@
     "name": "Banarban Package",
     "price": 700,
     "destination": "Cox's bazar to Bandarban.",
+    "extra": "Photo session included",
     "duration": "Two days.",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGr0zCsoV2ZDzHetRBr9f9APx32tcnVhCROA&usqp=CAU"
   }

@@ -6,15 +6,15 @@ const Review = ({ review }) => {
   const { name, img, ratting, comment } = review;
   return (
     <div className="shadow-xl">
-      <div>
+      <div className="flex justify-center">
         <img
-          className="h-[375px] w-full p-4 rounded-[200px]"
+          className="w-[100px] h-[100px] p-4 rounded-[200px]"
           src={img}
           alt=""
         />
       </div>
-      <div className="m-5">
-        <h1 className="text-2xl text-center font-bold">{name}</h1>
+      <div className="m-5 font-serif">
+        <h1 className="text-2xl text-blue-500 text-center font-bold">{name}</h1>
         <p className="text-xl my-3">{comment}</p>
         <div>
           <Rating
