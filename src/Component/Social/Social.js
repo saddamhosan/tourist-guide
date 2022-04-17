@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import ghImg from '../../images/icons/download.png';
@@ -35,6 +36,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
    };
 
    if ( FBUser || GhUser || GgUser) {
+     toast.success("login success", { id: "login" });
      navigate(from, { replace: true });
    } 
 
@@ -42,7 +44,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
       <div>
         {(FBLoading || GhLoading || GgLoading) && (
           <p>
-            <Spinner/>
+            <Spinner />
           </p>
         )}
 
@@ -85,6 +87,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
             <span className="ml-5"> Login with Facebook</span>
           </div>
         </button>
+        <Toaster />
       </div>
     );
 };

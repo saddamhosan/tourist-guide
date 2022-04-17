@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
@@ -33,16 +34,18 @@ const Login = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       await signInWithEmailAndPassword(email, password);
+     
     };
 
    
 
     const handleResetPassword = () => {
       sendPasswordResetEmail(email);
-      console.log("sent email");
+      toast.success("sent email",{id:'sent mail'});
     };
 
     if (user ) {
+       toast.success("login success", { id: "login" });
       navigate(from, { replace: true });
     } 
 
@@ -57,7 +60,7 @@ const Login = () => {
             </label>
             <input
               onBlur={handleEmail}
-              className="btn text-2xl border w-full"
+              className="btn text-xl p-2 border w-full"
               type="email"
               name="email"
               required
@@ -69,7 +72,7 @@ const Login = () => {
             </label>
             <input
               onBlur={handlePassword}
-              className="btn text-2xl border w-full"
+              className="btn text-2xl border w-full p-2"
               type="password"
               name="password"
               required
@@ -112,6 +115,7 @@ const Login = () => {
           </span>
         </p>
         <Social />
+        <Toaster />
       </div>
     );
 };

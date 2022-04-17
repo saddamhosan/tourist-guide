@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import '../Login/Log.css';
@@ -11,7 +12,6 @@ const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [confirmPassword, setConfirmPassword] = useState("");
-const [mistake, setMistake] = useState("");
 
 const navigate = useNavigate();
 
@@ -36,14 +36,14 @@ const handleConfirmPassword = (e) => {
 
 
 const handleSubmit = async (e) => {
-  setMistake("");
   e.preventDefault();
   if (password !== confirmPassword) {
-    setMistake(" password mich match");
+    toast.error(" password mich match");
     return;
   }
   await createUserWithEmailAndPassword(email, password);
   await updateProfile({ displayName: name });
+  toast.success("login success", { id: "login" });
   navigate("/");
 };
 
@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleName}
-              className=" btn text-2xl border w-full"
+              className=" btn text-xl border w-full p-2"
               type="text"
               name="name"
               id=""
@@ -70,7 +70,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleEmail}
-              className="btn text-2xl border w-full"
+              className="btn text-xl border w-full p-2"
               type="email"
               name="email"
               required
@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handlePassword}
-              className="border w-full btn text-2xl"
+              className="border w-full btn text-xl p-2"
               type="password"
               name="password"
               required
@@ -94,13 +94,12 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleConfirmPassword}
-              className="border w-full btn text-2xl"
+              className="border w-full btn text-2xl p-2"
               type="password"
               name="confirm password"
               required
             />
           </div>
-          <p className="text-red-600">{mistake}</p>
           {(loading || updating) && <Spinner />}
           {(error || updateError) && (
             <p className="text-red-600">
@@ -122,6 +121,7 @@ const handleSubmit = async (e) => {
           </Link>
         </p>
         <Social />
+        <Toaster />
       </div>
     );
 };
