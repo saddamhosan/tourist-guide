@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
+import logo from '../../images/icons/logo.png';
 
 const Header = () => {
   let [open, setOpen] = useState(false);
@@ -12,10 +13,11 @@ const Header = () => {
     <div className="shadow-md w-full sticky md:static top-0 left-0">
       <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7">
         <div
-          className="text-white font-bold text-3xl cursor-pointer  font-[Poppins] 
+          className="flex items-center text-white font-bold text-3xl cursor-pointer  font-[Poppins] 
       "
         >
-          <Link to="/">Travel Companion</Link>
+          <img width={'40px'} src={logo} alt="" />
+          <Link className="ml-3" to="/">Travel Companion</Link>
         </div>
 
         <div

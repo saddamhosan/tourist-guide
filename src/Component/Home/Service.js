@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Service = ({service}) => {
   const navigate=useNavigate()
     const { img, name, extra, duration, destination, price } = service;
+   
     return (
       <div className="bg-white  rounded-xl shadow-2xl">
         <div>
