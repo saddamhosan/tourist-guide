@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import ghImg from '../../images/icons/download.png';
 import fbImg from '../../images/icons/fb.png';
 import googleImg from '../../images/icons/google.png';
+import Spinner from '../Spinner/Spinner';
 
 const Social = () => {
 const navigate = useNavigate();
@@ -40,8 +41,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
       <div>
         {(FBLoading || GhLoading || GgLoading) && (
           <p>
-            {/* <Spinners /> */}
-            loading....
+            <Spinner/>
           </p>
         )}
 

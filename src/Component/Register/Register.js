@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
+import Spinner from '../Spinner/Spinner';
 
 const Register = () => {
 const [name, setName] = useState("");
@@ -99,7 +100,7 @@ const handleSubmit = async (e) => {
             />
           </div>
           <p className="text-red-600">{mistake}</p>
-          {(loading || updating) && <p className="text-blue-600">loading...</p>}
+          {(loading || updating) && <Spinner/>}
           {(error || updateError) && (
             <p className="text-red-600">
               {error.message} {updateError.message}

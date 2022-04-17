@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Social from '../Social/Social';
+import Spinner from '../Spinner/Spinner';
 import auth from './../../firebase.init';
 
 const Login = () => {
@@ -75,8 +76,7 @@ const Login = () => {
 
           {(loading || sending) && (
             <p>
-              {/* <Spinners /> */}
-              loading....
+              <Spinner/>
             </p>
           )}
 

@@ -8,7 +8,7 @@ const Home = () => {
     <div className="bg-slate-200">
       <Banner />
       <Services />
-      <Reviews/>
+      <Reviews />
     </div>
   );
 };
