@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import '../Login/Log.css';
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
 
@@ -48,7 +49,7 @@ const handleSubmit = async (e) => {
 
 
     return (
-      <div className="w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
+      <div className="login w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
         <form onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold">Please Register...</h1>
           <div className="my-3">
@@ -57,7 +58,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleName}
-              className="border w-full"
+              className=" btn text-2xl border w-full"
               type="text"
               name="name"
               id=""
@@ -69,7 +70,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleEmail}
-              className="border w-full"
+              className="btn text-2xl border w-full"
               type="email"
               name="email"
               required
@@ -81,7 +82,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handlePassword}
-              className="border w-full"
+              className="border w-full btn text-2xl"
               type="password"
               name="password"
               required
@@ -93,14 +94,14 @@ const handleSubmit = async (e) => {
             </label>
             <input
               onBlur={handleConfirmPassword}
-              className="border w-full"
+              className="border w-full btn text-2xl"
               type="password"
               name="confirm password"
               required
             />
           </div>
           <p className="text-red-600">{mistake}</p>
-          {(loading || updating) && <Spinner/>}
+          {(loading || updating) && <Spinner />}
           {(error || updateError) && (
             <p className="text-red-600">
               {error.message} {updateError.message}

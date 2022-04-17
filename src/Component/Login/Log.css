@@ -1,0 +1,10 @@
+.login {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 5px 5px 10px #acacac, -5px -5px 10px #ffffff;
+}
+.btn {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 5px 5px 10px #acacac, -5px -5px 10px #ffffff;
+}

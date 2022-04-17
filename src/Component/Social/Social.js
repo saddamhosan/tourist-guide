@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import ghImg from '../../images/icons/download.png';
 import fbImg from '../../images/icons/fb.png';
 import googleImg from '../../images/icons/google.png';
+import '../Login/Log.css';
 import Spinner from '../Spinner/Spinner';
 
 const Social = () => {
@@ -59,7 +60,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
         </div>
         <button
           onClick={handleGoogleSignIn}
-          className="border-2 rounded-xl w-full text-xl py-2"
+          className="btn border-2 rounded-xl w-full text-xl py-2"
         >
           <div className="flex justify-center">
             <img width={"30px"} src={googleImg} alt="" />
@@ -68,7 +69,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
         </button>
         <button
           onClick={handleGithubSignIn}
-          className="border-2 rounded-xl w-full text-xl py-2 mt-2"
+          className="btn border-2 rounded-xl w-full text-xl py-2 my-5"
         >
           <div className="flex justify-center">
             <img width={"30px"} src={ghImg} alt="" />
@@ -77,7 +78,7 @@ const [signInWithFacebook, FBUser, FBLoading, FBError] =
         </button>
         <button
           onClick={handleFacebookSignIn}
-          className="border-2 rounded-xl w-full text-xl py-2 mt-2"
+          className=" btn border-2 rounded-xl w-full text-xl py-2 mt-2"
         >
           <div className="flex justify-center">
             <img width={"30px"} src={fbImg} alt="" />

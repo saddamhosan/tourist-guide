@@ -4,8 +4,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
 import auth from './../../firebase.init';
+import './Log.css';
 
 const Login = () => {
+    
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -46,7 +48,7 @@ const Login = () => {
 
 
     return (
-      <div className="w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
+      <div className="login w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
         <form onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold">Please Login...</h1>
           <div className="my-3">
@@ -55,7 +57,7 @@ const Login = () => {
             </label>
             <input
               onBlur={handleEmail}
-              className="border w-full"
+              className="btn text-2xl border w-full"
               type="email"
               name="email"
               required
@@ -67,7 +69,7 @@ const Login = () => {
             </label>
             <input
               onBlur={handlePassword}
-              className="border w-full"
+              className="btn text-2xl border w-full"
               type="password"
               name="password"
               required
@@ -76,7 +78,7 @@ const Login = () => {
 
           {(loading || sending) && (
             <p>
-              <Spinner/>
+              <Spinner />
             </p>
           )}
 
@@ -109,7 +111,7 @@ const Login = () => {
             reset password
           </span>
         </p>
-        <Social/>
+        <Social />
       </div>
     );
 };
