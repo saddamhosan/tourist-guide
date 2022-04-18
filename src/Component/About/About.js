@@ -5,8 +5,8 @@ const About = () => {
     return (
       <div className="md:flex justify-center items-center md:h-[90vh] mx-10">
         <div className="md:w-1/2">
-          <h1 className="text-5xl font-bold py-6">
-            I am <span className="text-orange-500">saddam hosan</span>
+          <h1 className="md:text-5xl text-3xl font-bold py-6">
+            Hi I am <span className="text-orange-500">saddam hosan</span>
           </h1>
           <p className="text-xl text-gray-500 pr-5">
             I’m actually an electrical student cleverly disguised as a
@@ -16,7 +16,7 @@ const About = () => {
             the web, which happily has proven itself to be a wonderful decision.
             In the next 6 months letter, I want to be a full-time programmer. So
             that, I spend my whole day, practically every day, experimenting
-            with HTML, CSS, and JavaScript.
+            with HTML, CSS, JavaScript and React js.
           </p>
         </div>
         <div className="md:w-1/2 my-10  ">

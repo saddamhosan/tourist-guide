@@ -10,7 +10,7 @@ const override = css`
 const Spinner = () => {
   return (
     <div className="sweet-loading">
-      <ClipLoader css={override} size={100} />
+      <ClipLoader css={override} size={80} />
     </div>
   );
 };
