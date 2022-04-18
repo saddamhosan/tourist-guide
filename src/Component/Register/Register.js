@@ -49,9 +49,11 @@ const handleSubmit = async (e) => {
 
 
     return (
-      <div className="login w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
+      <div className="login w-11/12  md:w-1/3 mx-auto border-2 my-5 p-10 rounded-xl font-serif">
         <form onSubmit={handleSubmit}>
-          <h1 className="text-2xl font-bold">Please Register...</h1>
+          <h1 className="text-2xl font-bold text-center text-blue-500">
+            Please Register...
+          </h1>
           <div className="my-3">
             <label className="block" htmlFor="name">
               Name
@@ -114,9 +116,12 @@ const handleSubmit = async (e) => {
             />
           </div>
         </form>
-        <p>
+        <p className="text-xl text-center">
           Already have an account?
-          <Link className="text-blue-600" to="/login">
+          <Link
+            className="text-blue-500 hover:text-orange-600 ml-3"
+            to="/login"
+          >
             Login
           </Link>
         </p>

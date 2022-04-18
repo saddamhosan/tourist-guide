@@ -15,8 +15,8 @@ const About = () => {
             aliquid tenetur at fugiat omnis!
           </p>
         </div>
-        <div className="md:w-1/2 mt-10 md:mt-0">
-          <img className="w-full" src={me} alt="" />
+        <div className="md:w-1/2 my-10  ">
+          <img className="w-[70%] block mx-auto" src={me} alt="" />
         </div>
       </div>
     );

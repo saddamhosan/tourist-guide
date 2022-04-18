@@ -51,9 +51,11 @@ const Login = () => {
 
 
     return (
-      <div className="login w-1/3 mx-auto border-2 my-5 p-10 rounded-xl">
+      <div className="login w-11/12 md:w-1/3 mx-auto border-2 my-5 p-10 rounded-xl font-serif">
         <form onSubmit={handleSubmit}>
-          <h1 className="text-2xl font-bold">Please Login...</h1>
+          <h1 className="text-2xl font-bold text-center text-blue-500">
+            Please Login...
+          </h1>
           <div className="my-3">
             <label className="block" htmlFor="email">
               Email
@@ -99,17 +101,20 @@ const Login = () => {
             />
           </div>
         </form>
-        <p>
+        <p className="text-xl text-center">
           First time on the Tourist guid?
-          <Link className="text-blue-600" to="/register">
+          <Link
+            className="text-blue-500 hover:text-orange-600 ml-3"
+            to="/register"
+          >
             Create account
           </Link>
         </p>
-        <p className="mt-2">
+        <p className="text-xl text-center mt-3">
           forget password?
           <span
             onClick={handleResetPassword}
-            className="text-blue-600 cursor-pointer"
+            className="text-blue-500 hover:text-orange-600 ml-3 cursor-pointer"
           >
             reset password
           </span>

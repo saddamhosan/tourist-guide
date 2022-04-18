@@ -40,7 +40,7 @@ const Service = ({service}) => {
             onClick={() => navigate("/checkout")}
             className="font-serif text-xl font-bold bg-blue-700 text-white mt-2 px-5 rounded-lg py-1 block mx-auto hover:text-gray-500 duration-500"
           >
-            Checkout
+            Hire Me
           </button>
         </div>
       </div>

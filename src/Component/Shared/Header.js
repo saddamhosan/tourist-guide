@@ -13,11 +13,11 @@ const Header = () => {
     <div className="shadow-md w-full sticky md:static top-0 left-0">
       <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7">
         <div
-          className="flex items-center text-white font-bold text-3xl cursor-pointer  font-[Poppins] 
+          className="flex items-center text-white font-bold text-2xl md:text-3xl cursor-pointer  font-[Poppins] 
       "
         >
-          <img width={'40px'} src={logo} alt="" />
-          <Link className="ml-3" to="/">Travel Companion</Link>
+          <img className="w-[35px] md:w-[40px] mr-1 md:mr-4" src={logo} alt="" />
+          <Link to="/">Travel Companion</Link>
         </div>
 
         <div
