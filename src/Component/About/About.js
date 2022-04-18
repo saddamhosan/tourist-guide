@@ -9,14 +9,14 @@ const About = () => {
             I am <span className="text-orange-500">saddam hosan</span>
           </h1>
           <p className="text-xl text-gray-500 pr-5">
-            I am very passionate about programming development. I always try to
-            hard work to fulfill my project.In every moment I try to gain my
-            programming level.In next 6 months at least I want to join a
-            reputated programming company as a interner or full time job.
-            Besides in the next 10 years, I'd like to move into a Chief
-            programming Officer role. A position like this senior programming
-            devoloper job would let me gain more experience with project
-            management and leadership.
+            I’m actually an electrical student cleverly disguised as a
+            successful web developer. Since it was relatively clear early on
+            that it would be slightly more than difficult to make a living
+            sitting under a tree while reading Kant, I’ve focused my energies on
+            the web, which happily has proven itself to be a wonderful decision.
+            In the next 6 months letter, I want to be a full-time programmer. So
+            that, I spend my whole day, practically every day, experimenting
+            with HTML, CSS, and JavaScript.
           </p>
         </div>
         <div className="md:w-1/2 my-10  ">
