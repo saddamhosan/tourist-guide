@@ -9,10 +9,14 @@ const Blogs = () => {
               Q:What is the difference between authorization and authentication?
             </h1>
             <p className="text-xl text-gray-500">
-              Ans: Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              quaerat dicta nobis ipsa non perspiciatis pariatur. Beatae soluta
-              unde quis voluptates rem cumque, ipsa odit ad asperiores, error
-              commodi assumenda.
+              Ans:Authentication confirms who the client is but Authorization
+              decides what assets a client can get to.Authentication works
+              through passwords, one-time pins, biometric data, and other data
+              given or entered by the client but Authorization works through
+              settings that are implemented and maintained by the
+              organization.Authentication is unmistakable to and in part
+              changeable by the client but Authorization isn not unmistakable to
+              or changeable by.
             </p>
           </div>
           <div className="bg-blue-100 p-5 rounded-xl">
@@ -21,10 +25,14 @@ const Blogs = () => {
               implement authentication?
             </h1>
             <p className="text-xl text-gray-500">
-              Ans: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Nesciunt saepe quae exercitationem! Alias magnam ratione dolores
-              expedita nemo libero corrupti error ea a architecto quasi fuga,
-              numquam mollitia ab optio?
+              Ans: do you have to implement authentication? I am using firebase
+              because it is very easy to use for a devoloper and also easy to
+              use for a user.Firebase made by google so that it provide a top
+              level secruity for a user and develpoer.Firebase oversees all
+              information real-time within the database.More often than not,
+              verification by a server involves the utilize of a client title
+              and watchword. other options is to implement authentication are
+              AppWrit
             </p>
           </div>
           <div className="bg-blue-100 p-5 rounded-xl">
@@ -33,10 +41,10 @@ const Blogs = () => {
               authentication
             </h1>
             <p className="text-xl text-gray-500">
-              Ans: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Fugit quos ullam eveniet accusamus quisquam saepe illum quas,
-              quasi delectus at, ab quaerat quam ea cumque repellendus commodi
-              doloremque facere assumenda!
+              Ans: There are many services which Firebase provides, Most useful
+              of them are: Cloud Firestore, Cloud Functions, Hosting, Cloud
+              Storage, Google Analytics, Predictions, Cloud Messaging, Dynamic
+              Links, Remote Config
             </p>
           </div>
         </div>

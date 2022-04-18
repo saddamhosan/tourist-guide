@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Service = ({service}) => {
   const navigate=useNavigate()
-    const { img, name, extra, duration, destination, price } = service;
+    const {id, img, name, extra, duration, destination, price } = service;
    
     return (
       <div className="bg-white  rounded-xl shadow-2xl">
@@ -37,7 +37,7 @@ const Service = ({service}) => {
             Price: $ {price}
           </h1>
           <button
-            onClick={() => navigate("/checkout")}
+            onClick={() => navigate(`/checkout/${id}`)}
             className="font-serif text-xl font-bold bg-blue-700 text-white mt-2 px-5 rounded-lg py-1 block mx-auto hover:text-gray-500 duration-500"
           >
             Hire Me

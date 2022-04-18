@@ -1,10 +1,10 @@
 .login {
-  border-radius: 16px;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 5px 5px 10px #acacac, -5px -5px 10px #ffffff;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #b6b9bd, #b0cef5);
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff;
 }
 .btn {
-  border-radius: 16px;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 5px 5px 10px #acacac, -5px -5px 10px #ffffff;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f1efef, #ebe7e7);
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff;
 }

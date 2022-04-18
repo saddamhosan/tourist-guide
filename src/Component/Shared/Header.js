@@ -10,8 +10,8 @@ const Header = () => {
   let [open, setOpen] = useState(false);
   const [user] = useAuthState(auth);
   return (
-    <div className="shadow-md w-full sticky md:static top-0 left-0">
-      <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7">
+    <div className="shadow-md w-full sticky top-0 left-0 z-50">
+      <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7 ">
         <div
           className="flex items-center text-white font-bold text-2xl md:text-3xl cursor-pointer  font-[Poppins] 
       "
