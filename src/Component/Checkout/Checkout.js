@@ -19,7 +19,7 @@ const Checkout = () => {
     e.preventDefault();
     toast.success("Thank you for hire me", { id: "Checkout" });
   };
-
+console.log(user);
   return (
     <div className="md:flex gap-10 mx-10 my-20">
       <div className="md:w-1/2">
