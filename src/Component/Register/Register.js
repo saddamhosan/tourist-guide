@@ -39,7 +39,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      toast.error(" password mich match");
+      toast.error(" password mich match",{id:'error'});
       return;
     }
     await createUserWithEmailAndPassword(email, password);

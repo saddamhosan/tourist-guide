@@ -9,14 +9,15 @@ const Blogs = () => {
               Q:What is the difference between authorization and authentication?
             </h1>
             <p className="text-xl text-gray-500">
-              Ans:Authentication confirms who the client is but Authorization
-              decides what assets a client can get to.Authentication works
-              through passwords, one-time pins, biometric data, and other data
-              given or entered by the client but Authorization works through
-              settings that are implemented and maintained by the
-              organization.Authentication is unmistakable to and in part
-              changeable by the client but Authorization isn not unmistakable to
-              or changeable by.
+              Ans: Authentication মূলত user কে সেটা যাচাই করে। Authentication
+              হলো একটি good identity এবং access management process এর প্রথম ধাপ।
+              Authentication process user দ্বারা দৃশ্যমান এবং user চাইলে এটিকে
+              আংশিক পরিবর্তন করতে পারে। Password, Pin ইত্যাদি process এর মাধ্যমে
+              Authentication কাজ করে। কোনো user কোন কোন resource ব্যাবহার করতে
+              পারবে সেটা Authorization নির্ধারণ করে। Authorization
+              Authentication এর উপর নির্ভশীল। Authentication করা না হলে
+              Authorization কাজ করে না। তবে user চাইলেই Authorization পরিবর্তন
+              করতে পারবে না।
             </p>
           </div>
           <div className="bg-blue-100 p-5 rounded-xl">
@@ -25,14 +26,14 @@ const Blogs = () => {
               implement authentication?
             </h1>
             <p className="text-xl text-gray-500">
-              Ans: do you have to implement authentication? I am using firebase
-              because it is very easy to use for a devoloper and also easy to
-              use for a user.Firebase made by google so that it provide a top
-              level secruity for a user and develpoer.Firebase oversees all
-              information real-time within the database.More often than not,
-              verification by a server involves the utilize of a client title
-              and watchword. other options is to implement authentication are
-              AppWrit
+              Ans:আমি firebase ব্যবহার করছি কারণ এটি developer এবং user এর জন্য
+              ব্যবহার করা সহজ। ফায়ারবেস গুগল তৈরি করেছে তাই এটি developer এবং
+              user কে top level security প্রদান করে।আমি আমার website কে hosting
+              করার জন্য, Authentication service add করার জন্য Firebase use
+              করি। <br /> website এ
+              authentication implement করার জন্য আমরা firebase ছাড়া আরো অনেক
+              website use করতে পারি যেমন: Parse, Back4App, AWS Amplify, Kuzzle,
+              Couchbase, NativeScript, RxDB, Flutter, LoopBack, SashiDo Ect
             </p>
           </div>
           <div className="bg-blue-100 p-5 rounded-xl">
@@ -41,10 +42,10 @@ const Blogs = () => {
               authentication
             </h1>
             <p className="text-xl text-gray-500">
-              Ans: There are many services which Firebase provides, Most useful
-              of them are: Cloud Firestore, Cloud Functions, Hosting, Cloud
-              Storage, Google Analytics, Predictions, Cloud Messaging, Dynamic
-              Links, Remote Config
+              Ans: Firebase user কে অনেকগুলো service provide করে। যেমন: Cloud
+              Firestore, Cloud Functions, Hosting, Cloud Storage, Google
+              Analytics, Predictions, Cloud Messaging, Dynamic Links, Remote
+              Config
             </p>
           </div>
         </div>
