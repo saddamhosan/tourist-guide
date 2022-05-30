@@ -4,7 +4,7 @@ import {
   useUpdateProfile
 } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "../Login/Log.css";
 import Social from "../Social/Social";
@@ -17,6 +17,8 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -47,7 +49,7 @@ const Register = () => {
   };
   if (user) {
     toast.success("login success", { id: "login" });
-    navigate("/");
+     navigate(from, { replace: true });
   }
 
   return (
