@@ -1,8 +1,8 @@
 # Travel Companion
 
-## This project [Live link](https://tourist-guide-ae9d0.web.app/).
-
 ## Github code link [Github Link](https://github.com/saddamhosan/tourist-guide)
+
+## This project [Live link](https://tourist-guide-ae9d0.web.app/).
 
 ### Features And Functionalities:
 
